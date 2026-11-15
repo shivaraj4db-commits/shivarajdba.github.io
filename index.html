@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional portfolio of Shivaraj C, Senior Database Administrator and Oracle DBA with 10 years of database administration experience.">
+  <title>Shivaraj C | Senior Database Administrator</title>
+  <style>
+    :root {
+      --navy: #10233f;
+      --blue: #1769aa;
+      --cyan: #20a4b8;
+      --ink: #243247;
+      --muted: #65748b;
+      --paper: #ffffff;
+      --bg: #f3f6fb;
+      --line: #e3eaf2;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font-family: Inter, "Segoe UI", Arial, sans-serif; line-height: 1.65;
+    }
+    a { color: inherit; }
+    .topbar {
+      background: var(--navy); color: #fff; padding: 14px 6%;
+      display: flex; justify-content: space-between; align-items: center; gap: 20px;
+      position: sticky; top: 0; z-index: 10;
+    }
+    .brand { font-weight: 800; letter-spacing: .4px; }
+    nav { display: flex; gap: 22px; flex-wrap: wrap; }
+    nav a { text-decoration: none; color: #dce8f6; font-size: .92rem; }
+    nav a:hover { color: #fff; }
+    .container { width: min(1100px, 90%); margin: auto; }
+    .hero {
+      background: linear-gradient(125deg, #10233f 0%, #174d79 65%, #167e91 100%);
+      color: white; padding: 78px 0 70px;
+    }
+    .hero-grid { display: grid; grid-template-columns: 1fr auto; gap: 35px; align-items: center; }
+    .eyebrow { color: #aeeaf0; text-transform: uppercase; letter-spacing: 2px; font-size: .78rem; font-weight: 700; }
+    h1 { font-size: clamp(2.5rem, 6vw, 4.4rem); line-height: 1.08; margin: 12px 0; }
+    .headline { font-size: clamp(1.05rem, 2vw, 1.35rem); color: #e2edf8; max-width: 800px; }
+    .hero-meta { color: #c6d9ea; margin-top: 18px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .btn {
+      display: inline-block; padding: 11px 18px; border-radius: 7px;
+      font-weight: 700; text-decoration: none; border: 1px solid #d7e9f5;
+    }
+    .btn.primary { background: white; color: var(--navy); }
+    .btn.secondary { color: white; }
+    .badge {
+      width: 150px; height: 150px; border-radius: 50%;
+      display: grid; place-items: center; background: rgba(255,255,255,.12);
+      border: 2px solid rgba(255,255,255,.45); font-size: 3.3rem; font-weight: 800;
+    }
+    main { padding: 42px 0 70px; }
+    section { margin: 0 0 26px; }
+    .card {
+      background: var(--paper); border: 1px solid var(--line); border-radius: 14px;
+      padding: 28px; box-shadow: 0 8px 28px rgba(16,35,63,.045);
+    }
+    h2 { color: var(--navy); margin: 0 0 18px; font-size: 1.55rem; }
+    h3 { color: var(--navy); margin: 0 0 4px; font-size: 1.12rem; }
+    p { margin: 0 0 12px; }
+    .muted { color: var(--muted); }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 26px; }
+    .stat { background: white; border: 1px solid var(--line); border-radius: 12px; padding: 18px; text-align: center; }
+    .stat strong { display: block; color: var(--blue); font-size: 1.7rem; }
+    .stat span { color: var(--muted); font-size: .9rem; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .timeline { border-left: 3px solid #cce3ef; padding-left: 22px; margin-left: 5px; }
+    .role { position: relative; margin: 0 0 24px; }
+    .role:last-child { margin-bottom: 0; }
+    .role:before {
+      content: ""; position: absolute; left: -30px; top: 7px; width: 11px; height: 11px;
+      border-radius: 50%; background: var(--cyan); border: 3px solid white;
+      box-shadow: 0 0 0 2px #b7dce6;
+    }
+    .date { color: var(--blue); font-size: .9rem; font-weight: 700; }
+    ul { margin: 10px 0 0; padding-left: 20px; }
+    li { margin: 6px 0; }
+    .chips { display: flex; flex-wrap: wrap; gap: 9px; }
+    .chip {
+      background: #edf5fb; color: #174d79; border: 1px solid #d8e9f5;
+      border-radius: 20px; padding: 7px 12px; font-size: .9rem; font-weight: 600;
+    }
+    .highlight-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .highlight {
+      padding: 13px 15px; background: #f6f9fc; border-left: 3px solid var(--cyan);
+      border-radius: 6px;
+    }
+    footer { background: var(--navy); color: #cbd8e6; text-align: center; padding: 24px; font-size: .9rem; }
+    @media (max-width: 720px) {
+      .topbar { align-items: flex-start; flex-direction: column; }
+      nav { gap: 12px; }
+      .hero { padding: 55px 0; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .badge { width: 95px; height: 95px; font-size: 2.2rem; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .two-col, .highlight-list { grid-template-columns: 1fr; }
+      .card { padding: 21px; }
+    }
+    @media print {
+      .topbar, .actions { display: none; }
+      body { background: white; }
+      .hero { padding: 35px 0; print-color-adjust: exact; }
+      .card, .stat { box-shadow: none; break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">SHIVARAJ C · PROFESSIONAL PROFILE</div>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a><a href="#experience">Experience</a>
+      <a href="#expertise">Expertise</a><a href="#education">Education</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Database Administration · Production Engineering</div>
+        <h1>Shivaraj C</h1>
+        <div class="headline">Senior Database Administrator | Oracle DBA | Openlink / ION | Oracle 19c | RAC | Data Guard | RMAN | PostgreSQL | SQL Server | AWS | DevOps DBA</div>
+        <div class="hero-meta">Bengaluru, India &nbsp;·&nbsp; 10 Years of Database Administration Experience</div>
+        <div class="actions">
+          <a class="btn primary" href="https://www.linkedin.com/in/shivaraj-c-7107a2a7/" target="_blank" rel="noopener">View LinkedIn Profile</a>
+          <a class="btn secondary" href="javascript:window.print()">Print / Save as PDF</a>
+        </div>
+      </div>
+      <div class="badge" aria-label="Initials SC">SC</div>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="stats">
+      <div class="stat"><strong>10</strong><span>Years' Experience</span></div>
+      <div class="stat"><strong>30+</strong><span>Database Upgrades</span></div>
+      <div class="stat"><strong>50+</strong><span>Migrations</span></div>
+      <div class="stat"><strong>200+</strong><span>Server Patching Activities</span></div>
+    </div>
+
+    <section id="about" class="card">
+      <h2>Professional Summary</h2>
+      <p>Senior Database Administrator with 10 years of experience in enterprise database administration, production support, performance tuning, high availability, disaster recovery, upgrades, migrations and automation. Strong hands-on expertise in Oracle Database 10g–19c, including RAC, ASM, Data Guard, RMAN, Data Pump, multitenant architecture and database patching.</p>
+      <p>Experienced in supporting Openlink / ION environments and collaborating with application, infrastructure and engineering teams to maintain database availability, stability and performance across production, development, QA and disaster-recovery environments. Also experienced with PostgreSQL, Microsoft SQL Server, AWS database services, Linux and shell scripting.</p>
+    </section>
+
+    <section id="experience" class="card">
+      <h2>Professional Experience</h2>
+      <div class="timeline">
+        <div class="role">
+          <div class="date">July 2017 – 2026</div>
+          <h3>Openlink India Software / ION Group</h3>
+          <div class="muted">Senior Database Administration · Enterprise Database Operations</div>
+          <ul>
+            <li>Administer and support Oracle databases across production and non-production environments, with a focus on availability, performance and operational stability.</li>
+            <li>Manage Oracle RAC, ASM, Data Guard, RMAN backup and recovery, Data Pump exports/imports, database refreshes and recovery activities.</li>
+            <li>Execute Oracle database upgrades from 12c to 19c, including AutoUpgrade and manual upgrade approaches; contributed to 30+ upgrade activities.</li>
+            <li>Perform database migrations, non-CDB to PDB conversions, patching and maintenance activities across enterprise database estates.</li>
+            <li>Investigate performance issues using AWR, ASH, Statspack, TKPROF, execution plans and SQL tuning techniques.</li>
+            <li>Automate routine DBA operations and monitoring using Linux shell scripting; support environment health checks and operational reporting.</li>
+            <li>Work with application, infrastructure and vendor teams on incident resolution, capacity planning, DR readiness and change implementation.</li>
+          </ul>
+        </div>
+        <div class="role">
+          <div class="date">November 2015 – July 2017</div>
+          <h3>IBM – ABB Project</h3>
+          <div class="muted">Database Administration</div>
+          <ul>
+            <li>Supported database administration activities for the ABB client environment.</li>
+            <li>Assisted with database operations, monitoring, troubleshooting and production support activities.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="muted" style="font-size:.86rem;margin-top:18px">Employment dates and role descriptions are based on information previously supplied. Please verify exact titles and dates before publishing.</p>
+    </section>
+
+    <section id="expertise" class="two-col">
+      <div class="card">
+        <h2>Core Technical Expertise</h2>
+        <div class="chips">
+          <span class="chip">Oracle 10g–19c</span><span class="chip">Oracle RAC</span>
+          <span class="chip">ASM</span><span class="chip">Data Guard</span>
+          <span class="chip">RMAN</span><span class="chip">Data Pump</span>
+          <span class="chip">CDB / PDB</span><span class="chip">Oracle Upgrades</span>
+          <span class="chip">Performance Tuning</span><span class="chip">AWR / ASH</span>
+          <span class="chip">PostgreSQL</span><span class="chip">Microsoft SQL Server</span>
+          <span class="chip">AWS</span><span class="chip">Linux</span>
+          <span class="chip">Shell Scripting</span><span class="chip">Ansible</span>
+          <span class="chip">Terraform</span><span class="chip">Monitoring & Automation</span>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Key Strengths</h2>
+        <ul>
+          <li>Production database support and incident troubleshooting</li>
+          <li>High availability and disaster recovery</li>
+          <li>Database upgrades, migrations and patching</li>
+          <li>SQL and database performance analysis</li>
+          <li>Backup, restore and recovery planning</li>
+          <li>Automation and operational improvement</li>
+          <li>Cross-team coordination and technical documentation</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Selected Project Highlights</h2>
+      <div class="highlight-list">
+        <div class="highlight"><strong>Oracle Upgrade Programme</strong><br>30+ Oracle 12c to 19c upgrade activities using AutoUpgrade and manual methods.</div>
+        <div class="highlight"><strong>Database Migration</strong><br>Participated in 50+ database migration activities across enterprise environments.</div>
+        <div class="highlight"><strong>Infrastructure Patching</strong><br>Supported 200+ server patching activities and associated database validation.</div>
+        <div class="highlight"><strong>Multitenant Adoption</strong><br>Experience with non-CDB to PDB conversion and schema migration to multitenant architecture.</div>
+      </div>
+    </section>
+
+    <section id="education" class="two-col">
+      <div class="card">
+        <h2>Education</h2>
+        <h3>Diploma – Computer Science Engineering</h3>
+      </div>
+      <div class="card">
+        <h2>Professional Links</h2>
+        <p><strong>LinkedIn</strong></p>
+        <p><a href="https://www.linkedin.com/in/shivaraj-c-7107a2a7/" target="_blank" rel="noopener">linkedin.com/in/shivaraj-c-7107a2a7</a></p>
+        <p class="muted">Contact details can be added when you provide the preferred professional email address and phone number.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Shivaraj C · Senior Database Administrator · Bengaluru, India</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
